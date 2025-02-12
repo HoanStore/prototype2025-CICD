@@ -6,6 +6,9 @@ JAR_NAME="prototype2025-cicd-0.0.1-SNAPSHOT.jar"
 # 로그 파일 위치
 LOG_FILE="/var/log/deploy.log"
 
+# 배포 스크립트 권한 부여 (권한 없으면 실행할 수 없으므로)
+chmod +x ./deploy.sh  # 스크립트에 실행 권한을 부여
+
 echo "$(date) - 배포 시작..." >> $LOG_FILE
 
 # 서버가 이미 실행 중이면 이전 프로세스 종료
